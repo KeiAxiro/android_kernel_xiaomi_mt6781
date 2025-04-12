@@ -56,7 +56,7 @@ make -j$(nproc) O=out \
     STRIP=llvm-strip \
     CROSS_COMPILE=aarch64-linux-gnu- \
     CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
-    Image.gz-dtb
+    Image.gz-dtb 2>&1 | tee build.log
 
 # Cek hasil dan zip
 if [ -f "out/arch/arm64/boot/Image.gz-dtb" ]; then
