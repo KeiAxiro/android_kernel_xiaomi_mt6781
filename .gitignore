@@ -58,6 +58,11 @@ modules.builtin
 /System.map
 /Module.markers
 
+/out
+/linux-X86
+
+keidjaru-kernel-fleur-*.zip
+
 #
 # RPM spec file (make rpm-pkg)
 #
