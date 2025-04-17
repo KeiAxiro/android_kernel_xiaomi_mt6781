@@ -36,25 +36,27 @@
 			kaslr-seed = <0 0>;
 	};
 
-	cluster0_opp: opp_table0 {
+cluster0_opp: opp_table0 {
 		compatible = "operating-points-v2";
 		opp-shared;
+		/* Underclocked states */
 		opp0 {
-			opp-hz = /bits/ 64 <500000000>;
-			opp-microvolt = <600000>;
+			opp-hz = /bits/ 64 <400000000>;  /* Reduced from 500MHz */
+			opp-microvolt = <575000>;      /* Reduced voltage */
 		};
 		opp1 {
-			opp-hz = /bits/ 64 <774000000>;
-			opp-microvolt = <675000>;
+			opp-hz = /bits/ 64 <600000000>;  /* Reduced from 774MHz */
+			opp-microvolt = <650000>;      /* Reduced voltage */
 		};
 		opp2 {
-			opp-hz = /bits/ 64 <875000000>;
-			opp-microvolt = <700000>;
+			opp-hz = /bits/ 64 <700000000>;  /* Reduced from 875MHz */
+			opp-microvolt = <675000>;      /* Reduced voltage */
 		};
 		opp3 {
-			opp-hz = /bits/ 64 <975000000>;
-			opp-microvolt = <725000>;
+			opp-hz = /bits/ 64 <800000000>;  /* Reduced from 975MHz */
+			opp-microvolt = <700000>;      /* Reduced voltage */
 		};
+		/* Original mid-range states kept similar */
 		opp4 {
 			opp-hz = /bits/ 64 <1075000000>;
 			opp-microvolt = <750000>;
@@ -67,63 +69,66 @@
 			opp-hz = /bits/ 64 <1275000000>;
 			opp-microvolt = <800000>;
 		};
+		/* Slightly overclocked high-end states */
 		opp7 {
-			opp-hz = /bits/ 64 <1375000000>;
-			opp-microvolt = <825000>;
+			opp-hz = /bits/ 64 <1400000000>;  /* Increased from 1375MHz */
+			opp-microvolt = <837500>;        /* Adjusted voltage */
 		};
 		opp8 {
-			opp-hz = /bits/ 64 <1500000000>;
-			opp-microvolt = <856250>;
+			opp-hz = /bits/ 64 <1525000000>;  /* Slightly increased */
+			opp-microvolt = <862500>;        /* Adjusted voltage */
 		};
 		opp9 {
-			opp-hz = /bits/ 64 <1618000000>;
-			opp-microvolt = <875000>;
+			opp-hz = /bits/ 64 <1650000000>;  /* Increased from 1618MHz */
+			opp-microvolt = <887500>;        /* Adjusted voltage */
 		};
 		opp10 {
-			opp-hz = /bits/ 64 <1666000000>;
-			opp-microvolt = <900000>;
+			opp-hz = /bits/ 64 <1700000000>;  /* Increased from 1666MHz */
+			opp-microvolt = <912500>;       /* Adjusted voltage */
 		};
 		opp11 {
-			opp-hz = /bits/ 64 <1733000000>;
-			opp-microvolt = <925000>;
+			opp-hz = /bits/ 64 <1760000000>;  /* Increased from 1733MHz */
+			opp-microvolt = <937500>;       /* Adjusted voltage */
 		};
 		opp12 {
-			opp-hz = /bits/ 64 <1800000000>;
-			opp-microvolt = <950000>;
+			opp-hz = /bits/ 64 <1830000000>;  /* Increased from 1800MHz */
+			opp-microvolt = <962500>;       /* Adjusted voltage */
 		};
 		opp13 {
-			opp-hz = /bits/ 64 <1866000000>;
-			opp-microvolt = <981250>;
+			opp-hz = /bits/ 64 <1900000000>;  /* Increased from 1866MHz */
+			opp-microvolt = <993750>;       /* Adjusted voltage */
 		};
 		opp14 {
-			opp-hz = /bits/ 64 <1933000000>;
-			opp-microvolt = <1006250>;
+			opp-hz = /bits/ 64 <1970000000>;  /* Increased from 1933MHz */
+			opp-microvolt = <1025000>;      /* Adjusted voltage */
 		};
 		opp15 {
-			opp-hz = /bits/ 64 <2000000000>;
-			opp-microvolt = <1031250>;
+			opp-hz = /bits/ 64 <2050000000>;  /* Increased from 2000MHz */
+			opp-microvolt = <1050000>;     /* Adjusted voltage */
 		};
 	};
 
 	cluster1_opp: opp_table1 {
 		compatible = "operating-points-v2";
 		opp-shared;
+		/* Underclocked states */
 		opp0 {
-			opp-hz = /bits/ 64 <774000000>;
-			opp-microvolt = <675000>;
+			opp-hz = /bits/ 64 <600000000>;  /* Reduced from 774MHz */
+			opp-microvolt = <650000>;      /* Reduced voltage */
 		};
 		opp1 {
-			opp-hz = /bits/ 64 <835000000>;
-			opp-microvolt = <693750>;
+			opp-hz = /bits/ 64 <700000000>;  /* Reduced from 835MHz */
+			opp-microvolt = <675000>;      /* Reduced voltage */
 		};
 		opp2 {
-			opp-hz = /bits/ 64 <919000000>;
-			opp-microvolt = <718750>;
+			opp-hz = /bits/ 64 <800000000>;  /* Reduced from 919MHz */
+			opp-microvolt = <700000>;      /* Reduced voltage */
 		};
 		opp3 {
-			opp-hz = /bits/ 64 <1002000000>;
-			opp-microvolt = <743750>;
+			opp-hz = /bits/ 64 <900000000>;  /* Reduced from 1002MHz */
+			opp-microvolt = <725000>;      /* Reduced voltage */
 		};
+		/* Original mid-range states kept similar */
 		opp4 {
 			opp-hz = /bits/ 64 <1085000000>;
 			opp-microvolt = <775000>;
@@ -136,239 +141,240 @@
 			opp-hz = /bits/ 64 <1308000000>;
 			opp-microvolt = <843750>;
 		};
+		/* Slightly overclocked high-end states */
 		opp7 {
-			opp-hz = /bits/ 64 <1419000000>;
-			opp-microvolt = <875000>;
+			opp-hz = /bits/ 64 <1450000000>;  /* Increased from 1419MHz */
+			opp-microvolt = <893750>;       /* Adjusted voltage */
 		};
 		opp8 {
-			opp-hz = /bits/ 64 <1530000000>;
-			opp-microvolt = <912500>;
+			opp-hz = /bits/ 64 <1560000000>;  /* Increased from 1530MHz */
+			opp-microvolt = <925000>;       /* Adjusted voltage */
 		};
 		opp9 {
-			opp-hz = /bits/ 64 <1670000000>;
-			opp-microvolt = <956250>;
+			opp-hz = /bits/ 64 <1700000000>;  /* Increased from 1670MHz */
+			opp-microvolt = <968750>;       /* Adjusted voltage */
 		};
 		opp10 {
-			opp-hz = /bits/ 64 <1733000000>;
-			opp-microvolt = <981250>;
+			opp-hz = /bits/ 64 <1760000000>;  /* Increased from 1733MHz */
+			opp-microvolt = <993750>;      /* Adjusted voltage */
 		};
 		opp11 {
-			opp-hz = /bits/ 64 <1796000000>;
-			opp-microvolt = <1012500>;
+			opp-hz = /bits/ 64 <1820000000>;  /* Increased from 1796MHz */
+			opp-microvolt = <1025000>;     /* Adjusted voltage */
 		};
 		opp12 {
-			opp-hz = /bits/ 64 <1860000000>;
-			opp-microvolt = <1037500>;
+			opp-hz = /bits/ 64 <1890000000>;  /* Increased from 1860MHz */
+			opp-microvolt = <1050000>;     /* Adjusted voltage */
 		};
 		opp13 {
-			opp-hz = /bits/ 64 <1923000000>;
-			opp-microvolt = <1062500>;
+			opp-hz = /bits/ 64 <1960000000>;  /* Increased from 1923MHz */
+			opp-microvolt = <1075000>;     /* Adjusted voltage */
 		};
 		opp14 {
-			opp-hz = /bits/ 64 <1986000000>;
-			opp-microvolt = <1093750>;
+			opp-hz = /bits/ 64 <2030000000>;  /* Increased from 1986MHz */
+			opp-microvolt = <1100000>;     /* Adjusted voltage */
 		};
 		opp15 {
-			opp-hz = /bits/ 64 <2050000000>;
-			opp-microvolt = <1118750>;
+			opp-hz = /bits/ 64 <2100000000>;  /* Increased from 2050MHz */
+			opp-microvolt = <1125000>;     /* Adjusted voltage */
 		};
 	};
 
-	cpus {
-		#address-cells = <1>;
-		#size-cells = <0>;
+cpus {
+    #address-cells = <1>;
+    #size-cells = <0>;
 
-		cpu0: cpu@000 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a55";
-			reg = <0x0000>;
-			enable-method = "psci";
-			clock-frequency = <2000000000>;
-			operating-points-v2 = <&cluster0_opp>;
-			dynamic-power-coefficient = <85>;
-			capacity-dmips-mhz = <427>;
-			cpu-idle-states = <&cpuoff_l &clusteroff_l
-						&mcusysoff &s2idle>;
-		};
+    cpu0: cpu@000 {
+        device_type = "cpu";
+        compatible = "arm,cortex-a55";
+        reg = <0x0000>;
+        enable-method = "psci";
+        clock-frequency = <2050000000>;  // Updated to match cluster0_opp max
+        operating-points-v2 = <&cluster0_opp>;
+        dynamic-power-coefficient = <94>;  // ~10% increase from 85
+        capacity-dmips-mhz = <438>;     // Scaled from 427 @2.0GHz to 2.05GHz
+        cpu-idle-states = <&cpuoff_l &clusteroff_l
+                    &mcusysoff &s2idle>;
+    };
 
-		cpu1: cpu@001 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a55";
-			reg = <0x0100>;
-			enable-method = "psci";
-			clock-frequency = <2000000000>;
-			operating-points-v2 = <&cluster0_opp>;
-			dynamic-power-coefficient = <85>;
-			capacity-dmips-mhz = <427>;
-			cpu-idle-states = <&cpuoff_l &clusteroff_l
-						&mcusysoff &s2idle>;
-		};
+    cpu1: cpu@001 {
+        device_type = "cpu";
+        compatible = "arm,cortex-a55";
+        reg = <0x0100>;
+        enable-method = "psci";
+        clock-frequency = <2050000000>;
+        operating-points-v2 = <&cluster0_opp>;
+        dynamic-power-coefficient = <94>;
+        capacity-dmips-mhz = <438>;
+        cpu-idle-states = <&cpuoff_l &clusteroff_l
+                    &mcusysoff &s2idle>;
+    };
 
-		cpu2: cpu@002 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a55";
-			reg = <0x0200>;
-			enable-method = "psci";
-			clock-frequency = <2000000000>;
-			operating-points-v2 = <&cluster0_opp>;
-			dynamic-power-coefficient = <85>;
-			capacity-dmips-mhz = <427>;
-			cpu-idle-states = <&cpuoff_l &clusteroff_l
-						&mcusysoff &s2idle>;
-		};
+    cpu2: cpu@002 {
+        device_type = "cpu";
+        compatible = "arm,cortex-a55";
+        reg = <0x0200>;
+        enable-method = "psci";
+        clock-frequency = <2050000000>;
+        operating-points-v2 = <&cluster0_opp>;
+        dynamic-power-coefficient = <94>;
+        capacity-dmips-mhz = <438>;
+        cpu-idle-states = <&cpuoff_l &clusteroff_l
+                    &mcusysoff &s2idle>;
+    };
 
-		cpu3: cpu@003 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a55";
-			reg = <0x0300>;
-			enable-method = "psci";
-			clock-frequency = <2000000000>;
-			operating-points-v2 = <&cluster0_opp>;
-			dynamic-power-coefficient = <85>;
-			capacity-dmips-mhz = <427>;
-			cpu-idle-states = <&cpuoff_l &clusteroff_l
-						&mcusysoff &s2idle>;
-		};
+    cpu3: cpu@003 {
+        device_type = "cpu";
+        compatible = "arm,cortex-a55";
+        reg = <0x0300>;
+        enable-method = "psci";
+        clock-frequency = <2050000000>;
+        operating-points-v2 = <&cluster0_opp>;
+        dynamic-power-coefficient = <94>;
+        capacity-dmips-mhz = <438>;
+        cpu-idle-states = <&cpuoff_l &clusteroff_l
+                    &mcusysoff &s2idle>;
+    };
 
-		cpu4: cpu@100 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a55";
-			reg = <0x0400>;
-			enable-method = "psci";
-			clock-frequency = <2000000000>;
-			operating-points-v2 = <&cluster0_opp>;
-			dynamic-power-coefficient = <85>;
-			capacity-dmips-mhz = <427>;
-			cpu-idle-states = <&cpuoff_l &clusteroff_l
-						&mcusysoff  &s2idle>;
-		};
+    cpu4: cpu@100 {
+        device_type = "cpu";
+        compatible = "arm,cortex-a55";
+        reg = <0x0400>;
+        enable-method = "psci";
+        clock-frequency = <2050000000>;
+        operating-points-v2 = <&cluster0_opp>;
+        dynamic-power-coefficient = <94>;
+        capacity-dmips-mhz = <438>;
+        cpu-idle-states = <&cpuoff_l &clusteroff_l
+                    &mcusysoff &s2idle>;
+    };
 
-		cpu5: cpu@101 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a55";
-			reg = <0x0500>;
-			enable-method = "psci";
-			clock-frequency = <2000000000>;
-			operating-points-v2 = <&cluster0_opp>;
-			dynamic-power-coefficient = <85>;
-			capacity-dmips-mhz = <427>;
-			cpu-idle-states = <&cpuoff_l &clusteroff_l
-						&mcusysoff  &s2idle>;
-		};
+    cpu5: cpu@101 {
+        device_type = "cpu";
+        compatible = "arm,cortex-a55";
+        reg = <0x0500>;
+        enable-method = "psci";
+        clock-frequency = <2050000000>;
+        operating-points-v2 = <&cluster0_opp>;
+        dynamic-power-coefficient = <94>;
+        capacity-dmips-mhz = <438>;
+        cpu-idle-states = <&cpuoff_l &clusteroff_l
+                    &mcusysoff &s2idle>;
+    };
 
-		cpu6: cpu@102 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a75";
-			reg = <0x0600>;
-			enable-method = "psci";
-			clock-frequency = <2050000000>;
-			operating-points-v2 = <&cluster1_opp>;
-			dynamic-power-coefficient = <275>;
-			capacity-dmips-mhz = <1024>;
-			cpu-idle-states = <&cpuoff_b &clusteroff_b
-						&mcusysoff  &s2idle>;
-		};
+    cpu6: cpu@102 {
+        device_type = "cpu";
+        compatible = "arm,cortex-a75";
+        reg = <0x0600>;
+        enable-method = "psci";
+        clock-frequency = <2100000000>;  // Updated to match cluster1_opp max
+        operating-points-v2 = <&cluster1_opp>;
+        dynamic-power-coefficient = <302>;  // ~10% increase from 275
+        capacity-dmips-mhz = <1075>;    // Scaled from 1024 @2.05GHz to 2.1GHz
+        cpu-idle-states = <&cpuoff_b &clusteroff_b
+                    &mcusysoff &s2idle>;
+    };
 
-		cpu7: cpu@103 {
-			device_type = "cpu";
-			compatible = "arm,cortex-a75";
-			reg = <0x0700>;
-			enable-method = "psci";
-			clock-frequency = <2050000000>;
-			operating-points-v2 = <&cluster1_opp>;
-			dynamic-power-coefficient = <275>;
-			capacity-dmips-mhz = <1024>;
-			cpu-idle-states = <&cpuoff_b &clusteroff_b
-						&mcusysoff &s2idle>;
-		};
+    cpu7: cpu@103 {
+        device_type = "cpu";
+        compatible = "arm,cortex-a75";
+        reg = <0x0700>;
+        enable-method = "psci";
+        clock-frequency = <2100000000>;
+        operating-points-v2 = <&cluster1_opp>;
+        dynamic-power-coefficient = <302>;
+        capacity-dmips-mhz = <1075>;
+        cpu-idle-states = <&cpuoff_b &clusteroff_b
+                    &mcusysoff &s2idle>;
+    };
 
-		cpu-map {
-			cluster0 {
-				core0 {
-					cpu = <&cpu0>;
-				};
-				core1 {
-					cpu = <&cpu1>;
-				};
-				core2 {
-					cpu = <&cpu2>;
-				};
-				core3 {
-					cpu = <&cpu3>;
-				};
-				core4 {
-					cpu = <&cpu4>;
-				};
-				core5 {
-					cpu = <&cpu5>;
-				};
-				doe_dvfs_cl0: doe {
-				};
-			};
-			cluster1 {
-				core0 {
-					cpu = <&cpu6>;
-				};
-				core1 {
-					cpu = <&cpu7>;
-				};
-				doe_dvfs_cl1: doe {
-				};
-			};
-		};
+    cpu-map {
+        cluster0 {
+            core0 {
+                cpu = <&cpu0>;
+            };
+            core1 {
+                cpu = <&cpu1>;
+            };
+            core2 {
+                cpu = <&cpu2>;
+            };
+            core3 {
+                cpu = <&cpu3>;
+            };
+            core4 {
+                cpu = <&cpu4>;
+            };
+            core5 {
+                cpu = <&cpu5>;
+            };
+            doe_dvfs_cl0: doe {
+            };
+        };
+        cluster1 {
+            core0 {
+                cpu = <&cpu6>;
+            };
+            core1 {
+                cpu = <&cpu7>;
+            };
+            doe_dvfs_cl1: doe {
+            };
+        };
+    };
 
-		idle-states {
-			entry-method = "arm,psci";
-			cpuoff_l: cpuoff_l {
-				compatible = "mediatek,idle-state";
-				arm,psci-suspend-param = <0x00010001>;
-				local-timer-stop;
-				entry-latency-us = <50>;
-				exit-latency-us = <100>;
-				min-residency-us = <1600>;
-			};
-			cpuoff_b: cpuoff_b {
-				compatible = "mediatek,idle-state";
-				arm,psci-suspend-param = <0x00010001>;
-				local-timer-stop;
-				entry-latency-us = <50>;
-				exit-latency-us = <100>;
-				min-residency-us = <1400>;
-			};
-			clusteroff_l: clusteroff_l {
-				compatible = "mediatek,idle-state";
-				arm,psci-suspend-param = <0x01010001>;
-				local-timer-stop;
-				entry-latency-us = <100>;
-				exit-latency-us = <250>;
-				min-residency-us = <2100>;
-			};
-			clusteroff_b: clusteroff_b {
-				compatible = "mediatek,idle-state";
-				arm,psci-suspend-param = <0x01010001>;
-				local-timer-stop;
-				entry-latency-us = <100>;
-				exit-latency-us = <250>;
-				min-residency-us = <1900>;
-			};
-			mcusysoff: mcusysoff {
-				compatible = "mediatek,idle-state";
-				arm,psci-suspend-param = <0x01010002>;
-				local-timer-stop;
-				entry-latency-us = <300>;
-				exit-latency-us = <1200>;
-				min-residency-us = <2600>;
-			};
-			s2idle: s2idle {
-				compatible = "mediatek,idle-state";
-				arm,psci-suspend-param = <0x01010100>;
-				local-timer-stop;
-				entry-latency-us = <500>;
-				exit-latency-us = <1400>;
-				min-residency-us = <4294967295>;
-			};
-		};
-	};
+    idle-states {
+        entry-method = "arm,psci";
+        cpuoff_l: cpuoff_l {
+            compatible = "mediatek,idle-state";
+            arm,psci-suspend-param = <0x00010001>;
+            local-timer-stop;
+            entry-latency-us = <50>;
+            exit-latency-us = <100>;
+            min-residency-us = <1600>;
+        };
+        cpuoff_b: cpuoff_b {
+            compatible = "mediatek,idle-state";
+            arm,psci-suspend-param = <0x00010001>;
+            local-timer-stop;
+            entry-latency-us = <50>;
+            exit-latency-us = <100>;
+            min-residency-us = <1400>;
+        };
+        clusteroff_l: clusteroff_l {
+            compatible = "mediatek,idle-state";
+            arm,psci-suspend-param = <0x01010001>;
+            local-timer-stop;
+            entry-latency-us = <100>;
+            exit-latency-us = <250>;
+            min-residency-us = <2100>;
+        };
+        clusteroff_b: clusteroff_b {
+            compatible = "mediatek,idle-state";
+            arm,psci-suspend-param = <0x01010001>;
+            local-timer-stop;
+            entry-latency-us = <100>;
+            exit-latency-us = <250>;
+            min-residency-us = <1900>;
+        };
+        mcusysoff: mcusysoff {
+            compatible = "mediatek,idle-state";
+            arm,psci-suspend-param = <0x01010002>;
+            local-timer-stop;
+            entry-latency-us = <300>;
+            exit-latency-us = <1200>;
+            min-residency-us = <2600>;
+        };
+        s2idle: s2idle {
+            compatible = "mediatek,idle-state";
+            arm,psci-suspend-param = <0x01010100>;
+            local-timer-stop;
+            entry-latency-us = <500>;
+            exit-latency-us = <1400>;
+            min-residency-us = <4294967295>;
+        };
+    };
+};
 
 	mtk_lpm: mtk_lpm {
 		compatible = "mediatek,mtk-lpm";
