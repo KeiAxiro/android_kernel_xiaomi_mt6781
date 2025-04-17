@@ -6,7 +6,7 @@
 SECONDS=0
 
 # Nama output zip
-ZIPNAME="keidjaru-kernel-fleur-$(date '+%Y%m%d-%H%M').zip"
+ZIPNAME="CPU_OCUV-GPU_OCUV-keidjaru-kernel-fleur-$(date '+%Y%m%d-%H%M').zip"
 
 # Path ke toolchain dan AnyKernel3
 TC_DIR="$HOME/project/kernel/linux-x86/clang-r547379"

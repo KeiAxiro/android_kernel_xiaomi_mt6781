@@ -61,7 +61,7 @@ modules.builtin
 /out
 /linux-x86
 
-keidjaru-kernel-fleur-*.zip
+*.zip
 
 #
 # RPM spec file (make rpm-pkg)
