@@ -58,6 +58,11 @@ modules.builtin
 /System.map
 /Module.markers
 
+/out
+/linux-x86
+
+*.zip
+
 #
 # RPM spec file (make rpm-pkg)
 #
@@ -134,3 +139,8 @@ all.config
 
 # Other
 !drivers/input/touchscreen/mediatek/ft3418_i2c/include/firmware/fw_sample.i
+/KernelSU-Next
+/android/AnyKernel3
+/out
+
+*.zip
